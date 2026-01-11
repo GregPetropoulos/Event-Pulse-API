@@ -10,9 +10,7 @@
  *
  * Learn more at https://developers.cloudflare.com/workers/
  */
-// TEST DEV Run wrangler dev in separate terminal curl "https://event-pulse-api.workers.dev/events?latlong=40.7128,-74.0060&radius=10"
 
-//TEST DEPLOYED wrangler deployed in separate terminal curl "https://event-pulse-api.gregpetropoulos0341.workers.dev/events?latlong=40.7128,-74.0060&radius=10"
 
 export { RateLimiter } from './rateLimiter'; // required for Cloudflare DO discovery
 import { normalizeEvents } from './helpers';
