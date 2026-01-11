@@ -9,7 +9,28 @@
 	"compatibility_date": "2025-09-27",
 	"observability": {
 		"enabled": true
-	}
+	},
+	// -----------------------
+	// Durable Objects Binding
+	// -----------------------
+	"durable_objects": {
+		"bindings": [
+			{
+				"name": "RATE_LIMITER",
+				"class_name": "RateLimiter"
+			}
+		]
+	},
+	// -----------------------
+	// REQUIRED for Free Plan
+	// SQLite-backed DO storage
+	// -----------------------
+	"migrations": [
+		{
+			"tag": "v1",
+			"new_sqlite_classes": ["RateLimiter"]
+		}
+	]
 	/**
 	 * Smart Placement
 	 * https://developers.cloudflare.com/workers/configuration/smart-placement/#smart-placement
